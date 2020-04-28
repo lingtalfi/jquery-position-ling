@@ -5,7 +5,7 @@ Jquery position ling
 An adaptation of the jquery.position method.
 
 
-This is a cheaper version than [the original one](https://github.com/jquery/jquery/blob/master/src/offset.js).
+This is a cheaper version than [the original one](https://github.com/jquery/jquery/blob/master/src/offset.js#L102).
 I dropped a few things I didn't understand, in particular the hooks variable.
 
 But in most cases it should behave the same, I suppose.
