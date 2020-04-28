@@ -40,6 +40,10 @@ console.log(jqp.position(el)); // Object { top: 135.6666717529297, left: 8 }
 History Log
 =============
 
+- 1.0.1 -- 2020-04-28
+
+    - fix offset variable conflict with function name
+    
 - 1.0.0 -- 2020-04-28
 
     - initial commit

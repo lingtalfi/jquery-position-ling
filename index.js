@@ -231,16 +231,16 @@ function getCss(elem, name, extra) {
 // This corresponds to the behavior of CSS absolute positioning
 // adapted from https://github.com/jquery/jquery/blob/master/src/offset.js
 function position(elem) {
-    let offsetParent, offset, doc, parentOffset = {top: 0, left: 0};
+    let offsetParent, _offset, doc, parentOffset = {top: 0, left: 0};
 
     // position:fixed elements are offset from the viewport, which itself always has zero offset
     if ("fixed" === getCss(elem, "position")) {
 
         // Assume position:fixed implies availability of getBoundingClientRect
-        offset = elem.getBoundingClientRect();
+        _offset = elem.getBoundingClientRect();
 
     } else {
-        offset = offset(elem);
+        _offset = offset(elem);
 
         // Account for the *real* offset parent, which can be the document or its root element
         // when a statically positioned element is identified
@@ -262,8 +262,8 @@ function position(elem) {
 
     // Subtract parent offsets and element margins
     return {
-        top: offset.top - parentOffset.top - getCss(elem, "marginTop", true),
-        left: offset.left - parentOffset.left - getCss(elem, "marginLeft", true),
+        top: _offset.top - parentOffset.top - getCss(elem, "marginTop", true),
+        left: _offset.left - parentOffset.left - getCss(elem, "marginLeft", true),
     };
 }
 

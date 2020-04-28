@@ -1,6 +1,6 @@
 {
   "name": "jquery-position-ling",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An adaptation of the jquery.position method.",
   "main": "index.js",
   "scripts": {
